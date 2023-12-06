@@ -1,6 +1,7 @@
 // FileUploader.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './../App.css'
 
 const FileUploader = () => {
   const [file, setFile] = useState(null);
@@ -22,10 +23,10 @@ const FileUploader = () => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
-    </div>
+    <div className='fileuploader'>
+    <input type="file" id="file-input" onChange={handleFileChange} />
+    <button id="upload-button" onClick={handleUpload}>Upload</button>
+  </div>
   );
 };
 

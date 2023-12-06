@@ -1,4 +1,5 @@
 // App.js
+import './App.css'
 import React, { useState } from 'react';
 import FileUploader from './components/FilerUploader';
 import FileList from './components/Filelist';
@@ -12,8 +13,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>File Management App</h1>
+    <div className='mainapp'>
+      <h1 className='header'>File Management App</h1>
       <FileUploader />
       <FileList onSelectFile={handleFileSelect} />
       {selectedFileId && <FileReader fileId={selectedFileId} />}
